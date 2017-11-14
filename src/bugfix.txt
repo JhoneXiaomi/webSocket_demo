@@ -1,0 +1,7 @@
+2017.01.15 高版本tomcat下启动会有警告: 
+		   Unable to add the resource at [/WEB-INF/classes/] to the cache because there was insufficient free space available after evicting expired cache entries - consider increasing the maximum size of the cache
+		        修复办法：在对应tomcat/conf/context.xml里加入   <Resources cachingAllowed="true" cacheMaxSize="100000" />  即可。
+		        
+2017.04.10 在前端用get请求往后台发送数据中文数据时，会有乱码问题，这个通过设置tomcat文件夹/conf/server.xml里的    
+			<Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" URIEncoding="UTF-8" redirectPort="8443" useBodyEncodingForURI="true"/>
+			加入useBodyEncodingForURI="true"即可。
