@@ -18,8 +18,10 @@ function onerror(evt) {
 }
 
 function onmessage(evt) {
-	console.log('onmessage');
-	document.getElementById('mensagemServer').innerHTML = 'Server: ' + evt.data;
+	console.log(evt.data);
+	// document.getElementById('mensagemServer').innerHTML = 'Server: ' + evt.data;
+	
+	document.getElementById('_message').append("<p>server"+evt.data+"<p>");
 }
 
 function sendMessage(message) {

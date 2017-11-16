@@ -10,5 +10,8 @@
 		
 		<p>Mensagem retornada pelo server:</p>
 		<span id="mensagemServer"></span>
+		<div id="_message">
+		
+		</div>
 	</body>
 </html>
